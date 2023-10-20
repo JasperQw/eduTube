@@ -14,7 +14,7 @@ class StressDetector extends Component
 
     private function query($data) {
     $response = Http::withHeaders([
-            'Authorization' => 'Bearer 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',
+            'Authorization' => 'Bearer '.env('HUGGING_FACE_API_TOKEN'),
             'Content-Type' => 'application/json',
         ])
         ->post('https://api-inference.huggingface.co/models/hsaglamlar/stress_twitter', [
