@@ -29,6 +29,9 @@ class PastYearPaperView extends Component
     public $newSubject;
     public PastYearForm $form;
 
+    public function mount() {
+        $this->educationLevel = Auth::user()->education_level;
+    }
     public function like($id) {
         $like = new like();
         $like->target_id = $id;

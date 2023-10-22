@@ -26,7 +26,7 @@ class MentalHealthArticleView extends Component
 
     public function mount($id) {
         $this->id = $id;
-        $article = MentalHealthArticle::with(['likes'])->where('id', $id)->first();    
+        $article = MentalHealthArticle::with(['likes', 'user'])->where('id', $id)->first();    
         if (isset($article) == true) {
             $this->article = $article;
         } else {

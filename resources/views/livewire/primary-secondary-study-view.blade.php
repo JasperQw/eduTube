@@ -336,25 +336,14 @@
       <div class="d-flex justify-content-between align-items-center mt-3 mb-5 px-3">
         <div class="input-group" style="width: 30rem;">
           <span class="input-group-text" id="basic-addon1">Search</span>
-          <input type="text" class="form-control" placeholder="Search the video..." aria-label="Username" aria-describedby="basic-addon1">
+          <input wire:model.live="search" type="text" class="form-control" placeholder="Search the video..." aria-label="Username" aria-describedby="basic-addon1">
         </div>
-        <ul class="nav-underline nav d-flex gap-5">
-          <li class="nav-item">
-            <a class="nav-link @if($type == '') active @endif" wire:click="changeType('')" href="#">All</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link @if($type == 'free') active @endif" wire:click="changeType('free')" href="#">Free</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link @if($type == 'subscribe') active @endif" wire:click="changeType('subscribe')" href="#">Subscribe</a>
-          </li>
 
-        </ul>
       </div>
       <div class="d-flex flex-grow-1 flex-column gap-5 h-100 overflow-scroll">
         @forelse ($tutorials as $tutorial)
         <div class="d-flex gap-4 mx-3 border border-2 border-opacity-25 border-secondary py-4 px-5 rounded-4">
-          <div class="">
+          <div class="w-100">
             <p class=" fs-3 ">{{$tutorial->title}}</p>
             <p>{{$tutorial->description}}</p>
             <div class="d-flex justify-content-between align-items-center ">
@@ -517,7 +506,7 @@
   </div>
 
   {{-- !! Webinar Modal --}}
-  <div wire:ignore.self class="modal fade" id="webinarModal" tabindex="-1" aria-labelledby="webinarModalLabel" aria-hidden="true">
+  <div wire:ignore.self class="modal modal-lg fade" id="webinarModal" tabindex="-1" aria-labelledby="webinarModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -536,7 +525,7 @@
           <div class="d-flex gap-3">
             <div class="form-floating mb-3 w-100">
               <select wire:model.live="education_level_input" id="education_level" class="form-select" required>
-                <option selected>--Select--</option>
+                <option selected value="">--Select--</option>
                 <option value="primary">Primary</option>
                 <option value="secondary">Secondary</option>
                 <option value="pre-u">Pre-U</option>
@@ -611,7 +600,7 @@
   </div>
 
   {{-- !! GL Modal --}}
-  <div wire:ignore.self class="modal fade" id="glModal" tabindex="-1" aria-labelledby="glModalLabel" aria-hidden="true">
+  <div wire:ignore.self class="modal modal-lg fade" id="glModal" tabindex="-1" aria-labelledby="glModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -630,7 +619,7 @@
           <div class="d-flex gap-3">
             <div class="form-floating mb-3 w-100">
               <select wire:model.live="education_level_input" id="education_level" class="form-select" required>
-                <option selected>--Select--</option>
+                <option selected value="">--Select--</option>
                 <option value="primary">Primary</option>
                 <option value="secondary">Secondary</option>
                 <option value="pre-u">Pre-U</option>
@@ -800,14 +789,6 @@
           <div class="form-floating mb-3">
             <input wire:model="form_tutorial.title" type="text" class="form-control" id="cctitle" placeholder="abc" required>
             <label for="cctitle">Title</label>
-          </div>
-          <div class="form-floating mb-3 w-100">
-            <select wire:model="form_tutorial.type" id="type" class="form-select" required>
-              <option selected value="">--Select--</option>
-              <option value="free">Free</option>
-              <option value="subcribe">Subcribe</option>
-            </select>
-            <label for="type">Type</label>
           </div>
 
           <div class="d-flex gap-3">

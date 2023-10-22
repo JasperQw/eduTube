@@ -20,7 +20,6 @@ return new class extends Migration
             $table->integer('year')->nullable();
             $table->string('major')->nullable();
             $table->integer('like')->default(0);
-            $table->string('type')->enum(['free', 'subcribe']);
             $table->timestamps();
         });
     }

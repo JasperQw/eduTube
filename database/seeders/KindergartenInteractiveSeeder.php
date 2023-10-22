@@ -14,18 +14,18 @@ class KindergartenInteractiveSeeder extends Seeder
     public function run(): void
     {
         $record = new KindergartenInteractive();
-        $record->link = 'ABC_video.mp4';
-        $record->type = "alphabet";
+        $record->link = 'interactive_1.mp4';
+        $record->type = "logic";
         $record->save();
 
         $record = new KindergartenInteractive();
-        $record->link = 'action_song_1.mp4';
-        $record->type = "vocab";
+        $record->link = 'interactive_1.mp4';
+        $record->type = "logic";
         $record->save();
 
         $record = new KindergartenInteractive();
-        $record->link = 'action_song_2.mp4';
-        $record->type = "vocab";
+        $record->link = 'interactive_1.mp4';
+        $record->type = "math";
         $record->save();
     }
 }

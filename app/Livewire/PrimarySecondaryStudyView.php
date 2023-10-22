@@ -129,7 +129,6 @@ class PrimarySecondaryStudyView extends Component
 
         $tutorial->title = $form_tutorial->title;
         $tutorial->description = $form_tutorial->description;
-        $tutorial->type = $form_tutorial->type;
         $tutorial->education_level = $this->education_level_input;
         if ($this->education_level_input == 'primary' || $this->education_level_input == 'secondary') {
             $tutorial->year = $form_tutorial->year;
@@ -251,9 +250,6 @@ class PrimarySecondaryStudyView extends Component
             })
             ->when($this->search != '', function($q) {
                 return $q->where('title', 'LIKE', '%'.$this->search."%");
-            })
-            ->when($this->type != '', function($q) {
-                return $q->where(['type'=>$this->type]);
             })
             ->orderBy('like','desc')
             ->paginate(10);

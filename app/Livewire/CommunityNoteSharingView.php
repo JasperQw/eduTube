@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Livewire\Forms\CommunityNoteForm;
+use App\Models\Collection;
 use App\Models\CommunityNote;
 use App\Models\like;
 use Illuminate\Support\Facades\Auth;
@@ -39,6 +40,13 @@ class CommunityNoteSharingView extends Component
         $cn = CommunityNote::find($id);
         $cn->like += 1;
         $cn->save();
+    }
+
+    public function collect($id) {
+        $collect = new Collection();
+        $collect->user_id = Auth::user()->id;
+        $collect->community_note_id = $id;
+        $collect->save();
     }
 
     public function addCN() {

@@ -19,7 +19,6 @@ class StudyWorkplaceTutorialSeeder extends Seeder
             $record->education_level = "secondary";
             $record->year = 4;
             $record->like = 30;
-            $record->type = "free";
             $record->tutorial_url = "Biologi-Bab-4.pdf";
             $record->save();
 
@@ -29,7 +28,6 @@ class StudyWorkplaceTutorialSeeder extends Seeder
             $record->education_level = "secondary";
             $record->year = 5;
             $record->like = 20;
-            $record->type = "free";
             $record->tutorial_url = "Biologi-F5-C1.pdf";
             $record->save();
 
@@ -39,7 +37,6 @@ class StudyWorkplaceTutorialSeeder extends Seeder
             $record->education_level = "secondary";
             $record->year = 2;
             $record->like = 10;
-            $record->type = "subscribe";
             $record->tutorial_url = "form_2_science_c2.pdf";
             $record->save();
 
@@ -49,7 +46,6 @@ class StudyWorkplaceTutorialSeeder extends Seeder
             $record->education_level = "primary";
             $record->year = 6;
             $record->like = 100;
-            $record->type = "subscribe";
             $record->tutorial_url = "UPSR_C6.pdf";
             $record->save();
 
@@ -58,7 +54,6 @@ class StudyWorkplaceTutorialSeeder extends Seeder
             $record->description = "Markov chains are mathematical models that describe a sequence of events, where the probability of each event depends only on the state of the previous one. Named after Russian mathematician Andrey Markov, these chains find applications in various fields, from economics to biology and computer science. The system's future state is determined solely by its current state, embodying the principle of memorylessness. Markov chains are employed in predictive text algorithms, weather forecasting, and even board games. Their simplicity and versatility make them a powerful tool for understanding and simulating sequential processes in diverse realms of study.";
             $record->education_level = "university";
             $record->like = 10;
-            $record->type = "free";
             $record->major = "information_technology";
             $record->tutorial_url = "UNIVERSITY_NOTE.pdf";
             $record->save();

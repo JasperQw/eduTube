@@ -148,8 +148,8 @@
           <div class="select-type">
             <select wire:model.live="type" class="form-select" aria-label="Default select example">
               <option selected value="">--Select--</option>
-              <option value="alphabet">Alphabet</option>
-              <option value="vocab">Vocabulary</option>
+              <option value="logic">Logic</option>
+              <option value="math">Math</option>
             </select>
           </div>
 

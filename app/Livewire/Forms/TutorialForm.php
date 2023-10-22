@@ -10,6 +10,5 @@ class TutorialForm extends Form
     public $title;
     public $description;
     public $tutorial_url;
-    public $type;
     public $year;
 }
